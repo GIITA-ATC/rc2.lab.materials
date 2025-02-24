@@ -17,7 +17,7 @@ public class MyAddresses {
 				System.out.println("\nMy IP list:");
 
                 for (InetAddress my_address : my_addresses) {
-                    System.out.println("    " + my_address.getHostAddress());
+                    System.out.println("    " + my_address);
                 }
 			} else {
 				System.out.println("No IP addresses found.");

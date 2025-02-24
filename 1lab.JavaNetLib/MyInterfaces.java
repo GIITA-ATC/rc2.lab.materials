@@ -3,8 +3,7 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.Enumeration;
 
-public class MyInterfacesIPv4 {
-
+public class MyInterfaces {
 	public static void main(String[] args) {
 		try {
             Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
@@ -19,15 +18,12 @@ public class MyInterfacesIPv4 {
 
 					while (iface_addresses.hasMoreElements()) {
 						InetAddress address = iface_addresses.nextElement();
-						if (address instanceof Inet4Address) {
-							System.out.println("        " + address.getHostAddress());
-						}
+						System.out.println("        " + address);
 					}
 				}
 			}
 		} catch (SocketException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-
 	}
 }

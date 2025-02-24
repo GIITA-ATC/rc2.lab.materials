@@ -1,10 +1,10 @@
 import java.net.NetworkInterface;
 import java.net.InetAddress;
+import java.net.Inet4Address;
 import java.net.SocketException;
 import java.util.Enumeration;
 
-public class MyInterfaces {
-
+public class MyInterfacesIPv4 {
 	public static void main(String[] args) {
 		try {
             Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
@@ -19,13 +19,14 @@ public class MyInterfaces {
 
 					while (iface_addresses.hasMoreElements()) {
 						InetAddress address = iface_addresses.nextElement();
-						System.out.println("        " + address.getHostAddress());
+						if (address instanceof Inet4Address) {
+							System.out.println("        " + address);
+						}
 					}
 				}
 			}
 		} catch (SocketException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-
 	}
 }
