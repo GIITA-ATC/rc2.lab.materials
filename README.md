@@ -1,2 +1,2 @@
 # rc2.lab.material
-Material privado del laboratorio de Redes II
+Repository with lab materials for the Computer Networks II course.
