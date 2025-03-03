@@ -7,15 +7,17 @@ import java.net.UnknownHostException;
 
 public class EchoClient {
     public static void main(String[] args) throws IOException {
-        if (args.length != 2) {
-            System.out.println("Usage: java EchoClient <host> <text>");
+        if (args.length < 2) {
+            System.out.println("Usage: java EchoClient <text> <host> [<port>]");
             return;
         }
 
-        String host = args[0];
-        String text = args[1];
+        String text = args[0];
+        String host = args[1];
+        int port = args.length > 2 ? Integer.parseInt(args[2]) : 7;
 
-        try (Socket socket = new Socket(host, 7);
+
+        try (Socket socket = new Socket(host, port);
              OutputStream out = socket.getOutputStream();
              InputStream in = socket.getInputStream()) {
 
