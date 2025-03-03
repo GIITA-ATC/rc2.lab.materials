@@ -1,6 +1,11 @@
 public class ThreadingExample {
     public static void main(String args[]) {
-		String[] words = args[0].split(" ");
+		if (args.length < 1) {
+			System.err.println("Usage: java ThreadingExample <word1> <word2> ... <wordN>");
+			System.exit(1);
+		}
+
+		String[] words = args;
 		int numThreads = words.length;
 
 		for (int i = 0; i < numThreads; i++) {
@@ -20,6 +25,7 @@ public class ThreadingExample {
 			System.out.println("Thread " + this.getId() + ": " + word);
 
 			try {
+				// All words will be printed at the same time despite the sleep
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				System.err.println("Error with thread: " + e.getMessage());
