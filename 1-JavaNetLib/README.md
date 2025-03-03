@@ -13,19 +13,13 @@ This program lists all available network interfaces on the machine, including th
 ### **Exercise 2b: `MyInterfacesIPv4.java`**
 This program is a modified version of Exercise 2a but filters out only IPv4 addresses. It ensures that only IPv4 addresses are displayed instead of both IPv4 and IPv6.
 
-## Makefile
+## Running the Exercises
 
-A `Makefile` is provided to facilitate compilation and cleanup:
 
-- **`make compile`** → Compiles all Java files.
-- **`make clean`** → Removes all compiled `.class` files.
-- **`make`** → Default target; runs `make compile`.
 
-To run a specific exercise after compilation, use:
-```sh
+Compile a specific exercise with `javac <filename>.java`, then run it with `java <filename>`. For example, to run Exercise 1, use the following commands:
+
+```bash
+javac MyAddresses.java
 java MyAddresses
-java MyInterfaces
-java MyInterfacesIPv4
 ```
-
-Remember you can also compile a specific exercise with `javac <filename>.java`.
