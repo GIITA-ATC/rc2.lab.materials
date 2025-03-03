@@ -22,7 +22,7 @@ public class ThreadingExample {
 
 		@Override
 		public void run() {
-			System.out.println("Thread " + this.getId() + ": " + word);
+			System.out.println(Thread.currentThread().getName() + ": " + word);
 
 			try {
 				// All words will be printed at the same time despite the sleep
