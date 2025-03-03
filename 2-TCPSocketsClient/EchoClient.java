@@ -8,8 +8,8 @@ import java.net.UnknownHostException;
 public class EchoClient {
     public static void main(String[] args) throws IOException {
         if (args.length < 2) {
-            System.out.println("Usage: java EchoClient <text> <host> [<port>]");
-            return;
+            System.err.println("Usage: java EchoClient <text> <host> [<port>]");
+            System.exit(1);
         }
 
         String text = args[0];
