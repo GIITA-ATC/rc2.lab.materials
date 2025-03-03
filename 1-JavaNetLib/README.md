@@ -1,6 +1,6 @@
 # Lab 1 - Java.net Library
 
-This repository contains the exercises for **Lab 1** of the Computer Networks course. The exercises involve working with Java's networking libraries to retrieve information about the local machine's network configuration.
+This repository contains the exercises for **Lab 1** of the Computer Networks II course. The exercises involve working with Java's networking libraries to retrieve information about the local machine's network configuration.
 
 ## Exercises
 
