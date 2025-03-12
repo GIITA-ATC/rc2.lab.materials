@@ -1,0 +1,39 @@
+.nav {
+  background-color: #0f1b49;
+  padding: 1rem;
+}
+
+.nav__logo {
+  height: 60px;
+  width: 120px;
+  display: inline-block;
+}
+
+.nav__list {
+  padding: 0.75rem 0 0 3rem;
+  width: 500px;
+  vertical-align: top;
+  display: inline-block;
+  margin: 0;
+}
+
+.nav__item {
+  margin-right: 1.25rem;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+  font-variant: small-caps;
+  font-size: 1.25rem;
+  letter-spacing: 0.02rem;
+  margin-bottom: -10px;
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  color: #7f9cdb;
+  border-bottom: 0.001rem solid gray;
+}
