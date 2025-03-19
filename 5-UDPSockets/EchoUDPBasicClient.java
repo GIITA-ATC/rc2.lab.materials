@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.DatagramPacket;
+import java.net.InetAddress;
 
 public class EchoUDPBasicClient {
     public static void main(String[] args) throws IOException {
@@ -18,7 +19,7 @@ public class EchoUDPBasicClient {
         DatagramPacket out_packet = new DatagramPacket(
             text.getBytes("UTF-8"),
             text.length(),
-            java.net.InetAddress.getByName(host), port
+            InetAddress.getByName(host), port
         );
 
         socket.send(out_packet);
