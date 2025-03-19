@@ -14,7 +14,7 @@ public class EchoUDPBasicClient {
         int port = args.length > 2 ? Integer.parseInt(args[2]) : 10000;
 
         DatagramSocket socket = new DatagramSocket();
-        DatagramPacket in_packet = new DatagramPacket(new byte[1024], 1024);
+        DatagramPacket in_packet = new DatagramPacket(new byte[255], 255);
         DatagramPacket out_packet = new DatagramPacket(
             text.getBytes("UTF-8"),
             text.length(),
@@ -28,5 +28,6 @@ public class EchoUDPBasicClient {
         System.out.println("Received: "
             + new String(in_packet.getData(), 0, in_packet.getLength(), "UTF-8"));
 
+        socket.close();
     }
 }
