@@ -1,6 +1,6 @@
 # Sesión 8: OpenVPN Client
 
-En esta sesión, aprenderás a configurar un cliente para que utilice OpenVPN. El requisito previo para esta sesión es la instalación de OpenVPN:
+En esta sesión aprenderás a configurar un cliente para que utilice OpenVPN. El requisito previo para esta sesión es la instalación de OpenVPN:
 
 ```bash
 sudo apt install openvpn
@@ -76,7 +76,7 @@ remote <host> 1194
 client
 ```
 
-Esto indica a OpenVPN dónde encontrar los archivos de la CA, el certificado del cliente, la clave privada del cliente y la clave de cifrado TLS (1 = modo cliente). También especifica la dirección IP o nombre de host del servidor OpenVPN y el puerto a utilizar (1194 por defecto). La opción `client` indica que este es un cliente OpenVPN.
+Esto indica a OpenVPN dónde encontrar los archivos de la CA, el certificado del cliente, la clave privada del cliente y la clave de autenticación TLS (1 = modo cliente). También especifica la dirección IP o nombre de host del servidor OpenVPN y el puerto a utilizar (1194 por defecto). La opción `client` indica que este es un cliente OpenVPN.
 
 ## 4. Inicio de la conexión
 

@@ -1,7 +1,7 @@
 
 # Sesión 7: OpenVPN Server
 
-En esta sesión, aprenderás a configurar un servidor OpenVPN y a crear una infraestructura de clave pública (PKI) para gestionar los certificados necesarios. Los requisitos previos para esta sesión son la instalación de OpenVPN y Easy-RSA:
+En esta sesión aprenderás a configurar un servidor OpenVPN y a crear una infraestructura de clave pública (PKI) para gestionar los certificados necesarios. Los requisitos previos para esta sesión son la instalación de OpenVPN y Easy-RSA:
 
 ```bash
 sudo apt install openvpn easy-rsa
